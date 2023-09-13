@@ -1,9 +1,10 @@
 import { MyContext } from "../../components/ContextProvider"
+import { CircleLoader } from "../../components/loader"
 
 import Card from "../../components/card"
 import { useContext } from "react"
 const FeaturedMovie = () => {
-    const {filterMovies}=useContext(MyContext)
+    const {filterMovies,error}=useContext(MyContext)
       
     return (
         <div className="p-10 flex flex-col justify-center items-center">

@@ -1,14 +1,15 @@
 import { useNavigate } from "react-router-dom"
 import { ReactComponent as FavoriteIcon } from "../../src/assets/Favorite.svg"
 import { ReactComponent as Tomoto } from "../../src/assets/tomato.svg"
+import { useState } from "react"
 const Card = ({ movie }) => {
     const {id, poster_path, title, release_date } = movie
     let navigate = useNavigate();
-    let imageUrl=`https://image.tmdb.org/t/p/w500${poster_path}`
-    console.log(movie)
+    const imageUrl=`https://image.tmdb.org/t/p/w500${poster_path}`
+    const [isClicked, setIsClicked]=useState(false)
     const handleChange = (e) => {
         e.stopPropagation()
-        alert("okay")
+        setIsClicked(true)
       }
     return (
         <div className=" w-[] md:w-[250px] relative" data-testid="movie-card" onClick={()=>{
@@ -28,7 +29,7 @@ const Card = ({ movie }) => {
                 </div>
             </div>
             <p data-testid="movie-release-date" className="text-[14px] mt-2">released-On:{release_date}</p>
-            <FavoriteIcon className="absolute top-[3%] left-[10%] text-black" onClick={handleChange}/>
+             <FavoriteIcon className={`absolute top-[3%] left-[10%] text-black ${ isClicked ? "bg-red-600" : "" }`} onClick={handleChange}/>
 
         </div>
     )

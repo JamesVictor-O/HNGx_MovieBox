@@ -13,7 +13,7 @@ const LandingPage = () => {
     return (
         <>
             <div className="gradient-background bg-center h-[500px] bg-cover">
-                <header className="flex flex-row justify-between items-center pt-4 mx-8">
+                <header className="flex flex-row justify-between items-center pt-4 mx-4 md:mx-8">
                     <img alt="logo" className="w-[40px] md:hidden" src="../../../src/assets/tv.png"/>
                     <LogoIcon className="sm:w-[20%] hidden md:flex"/>
                     <SearchBox/>
@@ -35,10 +35,12 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <p className="text-left md:mt-0 mt-4">John wick is on the run after killing a member of the international assassin's guild and with a $14 million price tag on his head, he is the target of every hit man and woman</p>
-                    <CustomButton>
-                        <PlayNow />
-                        <span className="text-[13px]">WATCH TRAILER</span>
-                    </CustomButton>
+                    <div className="mt-8 md:">
+                        <CustomButton>
+                            <PlayNow />
+                            <span className="text-[13px]">WATCH TRAILER</span>
+                        </CustomButton>
+                    </div>
                 </section>
             </div>
         </>

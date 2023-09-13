@@ -15,6 +15,8 @@ const AboutPage = () => {
     }, [id, apiKey])
     
     const { original_title, runtime,release_date,overview, poster_path} = movie
+
+    console.log(movie)
     let imageUrl=`https://image.tmdb.org/t/p/w500${poster_path}`
 
     const year= new Date(release_date).getFullYear()
@@ -55,6 +57,21 @@ const AboutPage = () => {
                         </div>
                         
                         <p data-testid="movie-overview" className="text-[14px] md:w-[70%] pl-5">released-On:{overview}</p>
+
+                        <div className="ml-5 mt-8">
+                            <div className="flex flex-row items-center mb-3">
+                                <span>Director: </span>
+                                <p className="ml-2 text-red-700">Joseph Kosinski</p>
+                            </div>
+                            <div className="flex flex-row items-center mb-3">
+                                <span>Writers: </span>
+                                <p className="ml-2 text-red-700">Jim Cash, Jack Epps jr, peter Criag</p>
+                            </div>
+                            <div className="flex flex-row items-center mb-3">
+                                <span>Stars: </span>
+                                <p className="ml-2 text-red-700">Tom Cruise, Jennifer Connelly, Miles Teller</p>
+                            </div>
+                        </div>
                    </div>
             }
         </div>
