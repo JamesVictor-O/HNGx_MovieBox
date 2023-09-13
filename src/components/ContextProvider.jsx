@@ -6,8 +6,8 @@ export const MyContextProvider =({children}) => {
     let apiKey = "3ee590547c6286425382a40bab207116"
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
-      .then(reponse => reponse.json()).then(data => setMovies(data.results))
+    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
+      .then(reponse => reponse.json()).then(data => setMovies(data.results)).catch(err => console.log(err))
   }, [])
     
     const filterMovies = movies.slice(0, 10)

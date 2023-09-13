@@ -11,7 +11,7 @@ const FeaturedMovie = () => {
                 <h2>Featured Movie</h2>
                 <span>See more</span>
             </header>
-            <section className=" grid grid-cols-4 mt-5 gap-9">
+            <section className=" grid grid-cols-2 md:grid-cols-4 mt-5 gap-6">
                 {filterMovies.map(movie => (
                     <Card key={movie.id} movie={ movie } />
                 )

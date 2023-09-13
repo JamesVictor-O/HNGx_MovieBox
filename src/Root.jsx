@@ -5,8 +5,8 @@ import FeaturedMovie from "./page/featured Movie/featuredMovie"
 const Root = () => {
     return (
         <div>
-                <LandingPage />
-                <FeaturedMovie/>
+            <LandingPage />
+            <FeaturedMovie />
         </div>
     )
 }
