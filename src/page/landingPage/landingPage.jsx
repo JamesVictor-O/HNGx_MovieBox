@@ -18,18 +18,18 @@ const LandingPage = () => {
                     <SearchBox/>
                     <div className="flex flex-row items-center">
                         <span className="text-white pr-2">Sign in</span>
-                        <Signout/>
+                        <img alt="sign in" src="../../../src/assets/List-white.png"/>
                     </div>
                 </header>
                 <section className="mt-[6%] text-white ml-8 w-[25%]">
                     <h2 className="text-[40px]">JOHN WICK 3: Parabellum</h2>
                     <div className="flex flex-row justify-between items-center w-[50%]">
                         <div className="flex flex-row items-center justify-between">
-                            <Imdb />
+                            <img src="../../src/assets/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png" />
                             <span>860/100</span>
                         </div>
                         <div className="flex flex-row items-center justify-between">
-                            <Tomato/>
+                            <img src="../../src/assets/PngItem_1381056 1.jpg" className="pr-1" />
                             <span>90%</span>
                         </div>
                     </div>

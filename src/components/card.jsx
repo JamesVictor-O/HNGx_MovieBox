@@ -1,10 +1,16 @@
 import { useNavigate } from "react-router-dom"
+
 const Card = ({ movie }) => {
     const {id, poster_path, name, first_air_date } = movie
     let navigate = useNavigate();
     let imageUrl=`https://image.tmdb.org/t/p/w500${poster_path}`
+
+    const handleChange = (e) => {
+        e.stopPropagation()
+        alert("okay")
+      }
     return (
-        <div className=" w-[250px]" data-testid="movie-card" onClick={()=>{
+        <div className=" w-[250px] relative" data-testid="movie-card" onClick={()=>{
             navigate( `movies/${id}`)
         }}>
             <img alt="movie name" className="w-[100%]" data-testid="movie-poster" src={imageUrl} />
@@ -19,7 +25,8 @@ const Card = ({ movie }) => {
                     <span>97%</span>
                 </div>
             </div>
-            <p data-testid="movie-release-data" className="text-[14px] mt-2">released-On:{ first_air_date}</p>
+            <p data-testid="movie-release-data" className="text-[14px] mt-2">released-On:{first_air_date}</p>
+            <img alt="rating" src="../../src/assets/Favorite.png" className="absolute top-[3%] left-[10%] text-black" onClick={handleChange}/>
         </div>
     )
 }
