@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-
+import { ReactComponent as FavoriteIcon} from "../../src/assets/Favorite.svg"
 const Card = ({ movie }) => {
     const {id, poster_path, title, release_date } = movie
     let navigate = useNavigate();
@@ -26,7 +26,8 @@ const Card = ({ movie }) => {
                 </div>
             </div>
             <p data-testid="movie-release-date" className="text-[14px] mt-2">released-On:{release_date}</p>
-            <img alt="rating" src="../../src/assets/Favorite.png" className="absolute top-[3%] left-[10%] text-black" onClick={handleChange}/>
+            <FavoriteIcon className="absolute top-[3%] left-[10%] text-black" onClick={handleChange}/>
+
         </div>
     )
 }
