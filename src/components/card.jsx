@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
-import { ReactComponent as FavoriteIcon} from "../../src/assets/Favorite.svg"
+import { ReactComponent as FavoriteIcon } from "../../src/assets/Favorite.svg"
+import { ReactComponent as Tomoto } from "../../src/assets/tomato.svg"
 const Card = ({ movie }) => {
     const {id, poster_path, title, release_date } = movie
     let navigate = useNavigate();
@@ -21,7 +22,8 @@ const Card = ({ movie }) => {
                     <span className="pl-1">86.0/100</span>
                 </div>
                 <div className="flex flex-row items-center">
-                    <img src="../../src/assets/PngItem_1381056 1.jpg" className="pr-1" />
+                    <Tomoto/>
+                    {/* <img src="../../src/assets/PngItem_1381056 1.jpg" className="pr-1" /> */}
                     <span>97%</span>
                 </div>
             </div>
