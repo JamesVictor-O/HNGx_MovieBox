@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react"
 import { MyContext } from "../../components/ContextProvider"
-import { useParams } from "react-router-dom"
+
 import { LoaderCom } from "../../components/loader"
 import { ReactComponent as Play } from "../../../src/assets/Play.svg"
 
-const AboutPage = () => {
-    let { id } = useParams()
+const AboutPage = ({id}) => {
+    
     const [movie, setMovies]=useState({})
     let apiKey = "3ee590547c6286425382a40bab207116"
     
@@ -42,8 +42,8 @@ const AboutPage = () => {
             
             {
             !isLoading ? <LoaderCom /> :
-                    <div>
-                        <div className="bg-red-400 relative h-[500px] flex flex-col items-center justify-center rounded ml-5 mt-5" style={inlineStyle}>
+                    <div className="w-[100%]">
+                        <div className="bg-red-400 relative h-[500px] flex flex-col items-center justify-center rounded ml-0 md:ml-5 mt-5" style={inlineStyle}>
                             <span className="text-white text-[25px] font-bolder">Watch Trailer</span>
                             <Play className="w-[90px]" />
                         </div>

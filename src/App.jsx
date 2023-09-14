@@ -3,7 +3,7 @@ import { MyContextProvider } from './components/ContextProvider'
 
 import LandingPage from './page/landingPage/landingPage'
 import FeaturedMovie from './page/featured Movie/featuredMovie'
-import AboutPage from './page/aboutPage/aboutPage'
+import HomePage from './page/homePage/hompage'
 import Root from './Root'
 
 import { createBrowserRouter, createRoutesFromElements, Route,RouterProvider } from "react-router-dom"
@@ -17,7 +17,7 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route path='/' element={<Root/>}/>
-         <Route path='/movies/:id' element={ <AboutPage/> }/>
+         <Route path='/movies/:id' element={ <HomePage/> }/>
       </Route>
      )
   )
