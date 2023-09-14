@@ -10,13 +10,12 @@ export const Footer = () => {
                 <Facebook className="w-[17px]"/>
                 <Twitter className="w-[17px]"/>
                 <Instagram className="w-[17px]"/>
-                <Youtube className="w-[17px]"/>
-               
+                <Youtube className="w-[17px]" />
             </div>
-            <div className="flex justify-between w-[97%] md:w-[30%] my-2">
-              <span className="font-bold text-[12px]">Conditions of Use</span>
-              <span className="font-bold text-[12px]">Privacy & Policy</span>
-              <span className="font-bold text-[12px]">Press Room</span>
+            <div className="flex  justify-center items-center md:justify-between flex-col md:flex-row  w-[97%] md:w-[30%] my-2 mt-5 md:mt-0">
+              <span className="font-bold text-[17px]">Conditions of Use</span>
+              <span className="font-bold text-[17px]">Privacy & Policy</span>
+              <span className="font-bold text-[17px]">Press Room</span>
             </div>
 
             <div className="mt-2">@ 2021 MovieBox by Adriana Eka Prayudha</div>

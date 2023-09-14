@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom"
 import { ReactComponent as FavoriteIcon } from "../../src/assets/Favorite.svg"
-import { ReactComponent as Tomoto } from "../../src/assets/tomato.svg"
 import { useState } from "react"
 const Card = ({ movie }) => {
     const {id, poster_path, title, release_date } = movie
@@ -9,7 +8,7 @@ const Card = ({ movie }) => {
     const [isClicked, setIsClicked]=useState(false)
     const handleChange = (e) => {
         e.stopPropagation()
-        setIsClicked(true)
+        setIsClicked(!isClicked)
       }
     return (
         <div className=" w-[] md:w-[250px] relative" data-testid="movie-card" onClick={()=>{
@@ -23,8 +22,7 @@ const Card = ({ movie }) => {
                     <span className="pl-1">86.0/100</span>
                 </div>
                 <div className="flex flex-row items-center">
-                    <Tomoto/>
-                    {/* <img src="../../src/assets/PngItem_1381056 1.jpg" className="pr-1" /> */}
+                    <img src="../../src/assets/PngItem_1381056 1.jpg" className="pr-1" />
                     <span>97%</span>
                 </div>
             </div>
