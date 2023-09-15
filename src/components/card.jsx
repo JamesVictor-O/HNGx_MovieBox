@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import FavoriteIcon from "../../src/assets/Favorite.svg"
 import  Imdb  from '../../src/assets/imdb.svg'
-import  Tomato  from '../../src/assets/tomato.svg'
+import Tomato from '../../src/assets/tomato.svg'
 import { useState } from "react"
 const Card = ({ movie }) => {
     const {id, poster_path, title, release_date } = movie
@@ -12,6 +12,8 @@ const Card = ({ movie }) => {
         e.stopPropagation()
         setIsClicked(!isClicked)
       }
+
+      console.log(movie)
     return (
         <div className=" w-[] md:w-[250px] relative" data-testid="movie-card" onClick={()=>{
             navigate( `movies/${id}`)
@@ -31,7 +33,7 @@ const Card = ({ movie }) => {
             <p data-testid="movie-release-date" className="text-[14px] mt-2">released-On:{release_date}</p>
             
             <img alt="favourite icon" src={FavoriteIcon}  className={`absolute top-[3%] left-[10%] rounded-3xl ${isClicked ? "bg-red-600" : ""}`} onClick={handleChange} />
-
+            {/* <Genre genre={genre}/> */}
         </div>
     )
 }

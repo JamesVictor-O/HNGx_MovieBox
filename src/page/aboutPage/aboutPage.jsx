@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react"
 import { MyContext } from "../../components/ContextProvider"
-
 import { LoaderCom } from "../../components/loader"
 import { ReactComponent as Play } from "../../../src/assets/Play.svg"
+import { Genre } from "../../components/genres"
 
 const AboutPage = ({id}) => {
     
@@ -14,9 +14,12 @@ const AboutPage = ({id}) => {
         .then(reponse => reponse.json()).then(data => setMovies({...data}))
     }, [id, apiKey])
     
-    const { original_title, runtime,release_date,overview, poster_path} = movie
+    const { original_title,genres, runtime,release_date,overview, poster_path} = movie
 
-    console.log(movie)
+
+    console.log(genres)
+     console.log(movie)
+
     let imageUrl=`https://image.tmdb.org/t/p/w500${poster_path}`
 
     const year= new Date(release_date).getFullYear()
@@ -43,7 +46,7 @@ const AboutPage = ({id}) => {
             {
             !isLoading ? <LoaderCom /> :
                     <div className="w-[100%]">
-                        <div className="bg-red-400 relative h-[500px] flex flex-col items-center justify-center rounded ml-0 md:ml-5 mt-5" style={inlineStyle}>
+                        <div className="bg-red-400 relative h-[400px] flex flex-col items-center justify-center rounded ml-0 md:ml-5 mt-5" style={inlineStyle}>
                             <span className="text-white text-[25px] font-bolder">Watch Trailer</span>
                             <Play className="w-[90px]" />
                         </div>
@@ -54,6 +57,7 @@ const AboutPage = ({id}) => {
                                     <li data-tedtid="movie-release-date" className="">{year}</li>
                                     <li  data-testid="movie-runtime" className="ml-6">{hour}h { minutes}m</li>
                             </ul>
+                            <Genre genre={genres}/>
                         </div>
                         
                         <p data-testid="movie-overview" className="text-[14px] md:w-[70%] pl-5">released-On:{overview}</p>
@@ -72,6 +76,12 @@ const AboutPage = ({id}) => {
                                 <p className="ml-2 text-red-700">Tom Cruise, Jennifer Connelly, Miles Teller</p>
                             </div>
                         </div>
+
+                        <div className="border-grey-200 border rounded w-[70%] outline-none p-0 overflow-hidden h-[6%] ml-5">
+                            <span className="h-[100%] bg-red-700 w-[40%]  text-white p-1">Top rated movies #65</span>
+                            <span className="ml-4">Awarded 9 nominations</span>
+                        </div>
+                        
                    </div>
             }
         </div>
