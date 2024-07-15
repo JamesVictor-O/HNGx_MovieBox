@@ -16,10 +16,6 @@ const AboutPage = ({id}) => {
     
     const { original_title,genres, runtime,release_date,overview, poster_path} = movie
 
-
-    console.log(genres)
-     console.log(movie)
-
     let imageUrl=`https://image.tmdb.org/t/p/w500${poster_path}`
 
     const year= new Date(release_date).getFullYear()

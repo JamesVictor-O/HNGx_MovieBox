@@ -3,11 +3,14 @@ import { useContext } from "react"
 import { MyContext } from "./ContextProvider"
 import { ReactComponent as SearchIcon} from "../../src/assets/Search.svg"
 const SearchBox = () => {
-    const {setSearch}=useContext(MyContext)
+    const {setSearch,search}=useContext(MyContext)
 
     const handleChange = (e) => {
         e.preventDefault()
         setSearch(e.target.value)
+    }
+    const handleSearch=()=>{
+        console.log(search.toLowerCase())
     }
     return (
         <div className="w-[70%] md:w-[45%] border-red border rounded-lg flex flex-row items-center md:relative md:mb-0">
@@ -18,7 +21,7 @@ const SearchBox = () => {
                onChange={handleChange}
 
             />
-            <div onClick={handleChange}>
+            <div onClick={handleSearch} className="mr-3">
               <SearchIcon />
             </div>
         </div>

@@ -13,7 +13,6 @@ const Card = ({ movie }) => {
         setIsClicked(!isClicked)
       }
 
-      console.log(movie)
     return (
         <div className=" w-[] md:w-[250px] relative" data-testid="movie-card" onClick={()=>{
             navigate( `movies/${id}`)

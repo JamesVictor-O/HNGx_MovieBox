@@ -11,12 +11,13 @@ import CustomButton from "./customButton"
 
 export const Sidebar = () => {
     return (
-        <div className="flex border-black border-r p-0 md:p-4 overflow-hidden rounded-2xl items-center flex-col w-[15%]">
-                <div className=" flex flex-row items-center  w-[100%]">
-                    <img className="w-[100%] md:w-[60%]" src={Log}/>
+       <div className="fixed bg-red-500 w-[10%] border-r overflow-hidden h-full rounded-sm md:rounded-2xl border-black ">
+           <div className="flex  items-center flex-col bg-white h-full">
+                <div className=" flex flex-row items-center  w-[100%] m-2 ">
+                    <img className="w-[800%] md:w-[55%]" src={Log}/>
                     <span className="md:flex hidden">MobileBox</span>
                 </div>
-            <div className=" w-[100%] h-[30%] flex mt-8 flex-col py-6 justify-between">
+            <div className=" w-[100%] h-[30%] flex mt-8 flex-col py-6 justify-between items-center">
                 <NavLink to="/">
                     <div className="flex items-center cursor-pointer ">
                         <img alt="home" src={HomeIcon} />
@@ -48,6 +49,7 @@ export const Sidebar = () => {
                 <img alt="home" src={LogOut} />
                 <span className=" hidden md:flex font-sans font-bold text-[1.1rem] ml-3 ]">Log out</span>
            </div>
-        </div>
+           </div>
+       </div>
     )
 }

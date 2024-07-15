@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom"
 const HomePage = () => {
     let { id } = useParams()
     return (
-        <div className="flex w-[100%]">
+        <div className="rlative w-[100%]">
             <Sidebar />
-            <div className=" w-[100%]">
+            <div className="absolute w-[90%] right-0">
                 <AboutPage id={ id } />
             </div>
         </div>

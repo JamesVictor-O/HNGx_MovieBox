@@ -14,7 +14,7 @@ export const Header = () => {
                 </div>
                 <SearchBox/>
                 <div className="flex flex-row items-center">
-                    <span className="text-white pr-2 hidden md:flex">Sign in</span>
+                    <span className="text-white  pr-2 hidden md:block">Signin</span>
                     <img alt="sign out" src={Menu} className="w-[90%] md:ml-0 ml-2 md:w-[100%]"/>
                 </div>
             </header>
