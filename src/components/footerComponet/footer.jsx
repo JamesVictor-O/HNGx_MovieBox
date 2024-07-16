@@ -1,7 +1,7 @@
-import { ReactComponent as Facebook } from "../../src/assets/facebook.svg"
-import { ReactComponent as Twitter } from "../../src/assets/twitter.svg"
-import { ReactComponent as Instagram } from "../../src/assets/instagram.svg"
-import { ReactComponent as Youtube } from "../../src/assets/youtube.svg"
+import { ReactComponent as Facebook } from "../../../src/assets/facebook.svg"
+import { ReactComponent as Twitter } from "../../../src/assets/twitter.svg"
+import { ReactComponent as Instagram } from "../../../src/assets/instagram.svg"
+import { ReactComponent as Youtube } from "../../../src/assets/youtube.svg"
 
 export const Footer = () => {
     return (

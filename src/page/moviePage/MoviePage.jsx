@@ -1,7 +1,7 @@
-import { MyContext } from "../../components/ContextProvider"
+import { MyContext } from "../../components/contextApis/ContextProvider"
 import { CircleLoader } from "../../components/loader"
 
-import Card from "../../components/card"
+import Card from "../../components/CardComponent/card"
 import { useContext } from "react"
 const FeaturedMovie = () => {
     const {filterMovies,error,movies,swichPage}=useContext(MyContext)

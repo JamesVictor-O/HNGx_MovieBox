@@ -1,18 +1,24 @@
 import LandingPage from "./page/landingPage/landingPage"
-import FeaturedMovie from "./page/featured Movie/featuredMovie"
-import { Footer } from "./components/footer"
+import FeaturedMovie from "./page/moviePage/MoviePage"
 import SelectionBottons from "./components/selectionBottons"
+import { Footer } from "./components/footerComponet/footer"
+import { Sidebar } from "./components/sideBarComponent/sideBar"
+import { Header } from "./components/headerComponent/header"
+import { Outlet } from "react-router-dom"
 
 
 // import { MyContextProvider } from "./components/ContextProvider"
 const Root = () => {
     return (
-        <div>
-            <LandingPage />
-            <SelectionBottons/>
-            <FeaturedMovie />
-            <Footer/>
-            
+        <div >
+            <Header/>
+            <div className="flex">
+               <Sidebar/>
+                <div className="mt-20  md:ml-[150px] w-full min-h-[600px]">
+                  <Outlet/>
+                </div>
+            </div>
+           
         </div>
     )
 }

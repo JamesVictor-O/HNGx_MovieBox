@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { MyContext } from './ContextProvider'
+import { MyContext } from './contextApis/ContextProvider'
 
 const SelectionBottons = () => {
   const {swichPage, setSwichpage}=useContext(MyContext)

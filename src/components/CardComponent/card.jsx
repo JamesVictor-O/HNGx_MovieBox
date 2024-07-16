@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
-import FavoriteIcon from "../../src/assets/Favorite.svg"
-import  Imdb  from '../../src/assets/imdb.svg'
-import Tomato from '../../src/assets/tomato.svg'
+import FavoriteIcon from "../../../src/assets/Favorite.svg"
+import  Imdb  from '../../../src/assets/imdb.svg'
+import Tomato from '../../../src/assets/tomato.svg'
 import { useState } from "react"
 const Card = ({ movie }) => {
     const {id, poster_path, title, release_date } = movie
