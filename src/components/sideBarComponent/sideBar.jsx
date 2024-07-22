@@ -7,7 +7,7 @@ import LogOut from '../../assets/Logout.svg'
 import Log from '../../assets/tv.svg'
 import Calender from '../../assets/Calendar.svg'
 import CustomButton from "../customButtonComponent/customButton"
-import MobileSideBar from "./mobileSideBar"
+import MobileSideBar from "./MobileSideBar"
 import { useContext } from "react"
 import { MyContext } from "../contextApis/ContextProvider"
 
