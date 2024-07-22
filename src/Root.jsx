@@ -14,11 +14,11 @@ const Root = () => {
             <Header/>
             <div className="flex">
                <Sidebar/>
-                <div className="mt-20  md:ml-[150px] w-full min-h-[600px]">
+                <div className="mt-10 md:mt-20  md:ml-[150px] w-full min-h-[600px]">
                   <Outlet/>
                 </div>
             </div>
-           
+           <Footer/>
         </div>
     )
 }

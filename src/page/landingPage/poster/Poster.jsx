@@ -12,9 +12,9 @@ import CustomButton from "../../../components/customButtonComponent/customButton
 
 const Poster = () => {
   return (
-    <div className="gradient-background bg-center  md:h-[300px] bg-cover max-w-[800px] rounded-[20px]">
-        <section className=" text-white ml-8 md:max-w-[404px] min-h-[285px]  md:mt-[3%] flex flex-col justify-center">
-            <h2 className="text-[20px] md:text-[40px]">JOHN WICK 3: Parabellum</h2>
+    <div className="min-h-[90vh] gradient-background bg-center  md:min-h-[300px] bg-cover md:max-w-[900px] md:rounded-[20px]">
+        <section className="justify-between text-white mx-4 md:ml-8 md:max-w-[404px] min-h-[285px]  md:mt-[3%] flex flex-col md:justify-center ">
+            <h2 className="text-[50px] md:text-[30px]">JOHN WICK 3: Parabellum</h2>
             <div className="flex flex-row justify-between items-center w-[90%] mt-6 md:mt-0 md:w-[50%]">
                 <div className="flex flex-row items-center justify-between">
                     <img alt="imdb" src={Imdb } />
@@ -25,10 +25,10 @@ const Poster = () => {
                     <span>90%</span>
                 </div>
             </div>
-            <div className="max-w-[302px] min-h-[70px] md:mt-4 mt-4">
-            <p className="text-left text-[16px]  leading-[18px] font-medium">John wick is on the run after killing a member of the international assassin's guild and with a $14 million price tag on his head, he is the target of every hit man and woman</p>
+            <div className="max-w-[402px] min-h-[70px] md:mt-4 mt-10">
+              <p className="text-center md:text-left text-[16px]  leading-[18px] font-medium">John wick is on the run after killing a member of the international assassin's guild and with a $14 million price tag on his head, he is the target of every hit man and woman</p>
             </div>
-            <div className="mt-[15%] md:mt-2">
+            <div className="mt-[30%] md:mt-2 flex md:block items-center w-full justify-center align-middle ">
                 <CustomButton style={{backgroundColor:"red"}}>
                     <PlayNow />
                     <span className="text-[13px]">WATCH TRAILER</span>

@@ -1,19 +1,16 @@
 import { useState,useEffect } from "react"
 import MovieCard from "../moviecards/MovieCard"
+import useFetch from "./useFetch/useFetch"
 const Recommended = () => {
-    const [recomendedvideos,setrecommendedvideos]=useState([])
-    const url='https://api.themoviedb.org/3/movie/278/recommendations?api_key=3ee590547c6286425382a40bab207116'
-    useEffect(()=>{
-        fetch(url)
-        .then(repones => repones.json()).then(data => setrecommendedvideos(data.results))
-        .catch(err => console.log(err))
-    },[])
-   
+        const api_key=import.meta.env.VITE_API_KEY 
+        const url=`https://api.themoviedb.org/3/movie/278/recommendations?api_key=${api_key}`
+        const [recomendedvideos]=useFetch(url)
+
   return (
-    <div className='max-w-[800px] mt-5'>
+    <div className='max-w-[900px] mt-5 mb-10 md:mt-0'>
        <div>
          <span className="font-semibold text-[24px] py-5 leading-4">Recommend</span>
-           <div className="flex items-center gap-3 mt-3">
+           <div className="md:flex items-center mt-3  grid gap-3 grid-cols-2 md:grid-cols-4 md:gap-6">
                 {
                     recomendedvideos.slice(0,5).map(movie=>(
                     <MovieCard key={movie.id} movie={movie} />

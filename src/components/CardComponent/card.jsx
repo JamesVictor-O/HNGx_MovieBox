@@ -15,7 +15,7 @@ const Card = ({ movie }) => {
 
     return (
         <div className=" w-[] md:w-[250px] relative" data-testid="movie-card" onClick={()=>{
-            navigate( `movies/${id}`)
+            navigate( `/${id}`)
         }}>
             <img alt="movie name" className="w-[100%]" data-testid="movie-poster" src={imageUrl} />
             <h2 data-testid="movie-title" className="text-[12px] font-bold text-black mt-2">{title}</h2>

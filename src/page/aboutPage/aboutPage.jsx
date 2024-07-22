@@ -42,7 +42,7 @@ const AboutPage = ({id}) => {
             {
             !isLoading ? <LoaderCom /> :
                     <div className="w-[100%] md:max-w-[1]">
-                        <div className="bg-red-400 relative h-[400px] flex flex-col items-center justify-center rounded ml-0 md:ml-5 mt-5" style={inlineStyle}>
+                        <div className="relative h-[400px] flex flex-col items-center justify-center rounded ml-0 md:ml-5 mt-5" style={inlineStyle}>
                             <span className="text-white text-[25px] font-bolder">Watch Trailer</span>
                             <Play className="w-[90px]" />
                         </div>
