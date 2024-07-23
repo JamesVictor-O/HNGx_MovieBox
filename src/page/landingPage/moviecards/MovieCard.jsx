@@ -14,7 +14,7 @@ const MovieCard = ({movie}) => {
     onClick={()=>{
         navigate( `/${id}`)
     }}
-    className=' relative bg-center bg-cover md:w-[320px] w-[170px] min-h-[200px] flex flex-col justify-between rounded'
+    className=' relative bg-center bg-cover md:w-[320px] w-[164px] min-h-[200px] flex flex-col justify-between rounded'
       style={{
          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${imageUrl})`
       }}

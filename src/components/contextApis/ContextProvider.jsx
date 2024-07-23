@@ -17,8 +17,6 @@ export const MyContextProvider =({children}) => {
             setError(false)
             return setMovies(data.results) 
         }).catch(err => console.log(err))
-
-        console.log(movies)
   }, [])
     const searchMovies = movies.filter(movie => (
         movie.title.toLowerCase().includes(search.toLowerCase())
@@ -26,7 +24,7 @@ export const MyContextProvider =({children}) => {
     const filterMovies = movies.slice(0, 10)
     
     return (
-        <MyContext.Provider value={{filterMovies, setSearch,search, isLoading, error,setSwichpage,swichPage,isOpenNavBar, setIsOpenNavBar}}>
+        <MyContext.Provider value={{filterMovies, setSearch,search, isLoading, error,setSwichpage,swichPage,isOpenNavBar, setIsOpenNavBar,movies}}>
             {children}
         </MyContext.Provider>
     )
