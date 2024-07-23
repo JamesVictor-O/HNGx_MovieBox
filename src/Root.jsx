@@ -1,7 +1,7 @@
 import LandingPage from "./page/landingPage/landingPage"
 import FeaturedMovie from "./page/moviePage/MoviePage"
 import SelectionBottons from "./components/selectionBottons"
-import { Footer } from "./components/footerComponet/footer"
+
 import { Sidebar } from "./components/sideBarComponent/sideBar"
 import { Header } from "./components/headerComponent/header"
 import { Outlet } from "react-router-dom"
@@ -18,7 +18,6 @@ const Root = () => {
                   <Outlet/>
                 </div>
             </div>
-           <Footer/>
         </div>
     )
 }

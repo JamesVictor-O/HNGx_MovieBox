@@ -7,7 +7,7 @@ const Recommended = () => {
         const [recomendedvideos]=useFetch(url)
 
   return (
-    <div className='max-w-[900px] mt-5 mb-10 md:mt-0'>
+    <div className='max-w-[900px] mx-4 mt-5 mb-10 md:mx-0 md:mt-4'>
        <div>
          <span className="font-semibold text-[24px] py-5 leading-4">Recommend</span>
            <div className="md:flex items-center mt-3  grid gap-3 grid-cols-2 md:grid-cols-4 md:gap-6">

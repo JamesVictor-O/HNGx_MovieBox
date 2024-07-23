@@ -5,7 +5,7 @@ import { ReactComponent as Youtube } from "../../../src/assets/youtube.svg"
 
 export const Footer = () => {
     return (
-        <div className="flex flex-col justify-center items-center mb-10">
+        <div className="flex flex-col justify-center items-center mb-10 md:hidden">
             <div className="flex flex-row justify-between w-[60%]  md:w-[20%]">
                 <Facebook className="w-[17px]"/>
                 <Twitter className="w-[17px]"/>

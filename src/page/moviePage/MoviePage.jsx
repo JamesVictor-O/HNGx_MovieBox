@@ -1,11 +1,13 @@
 import { MyContext } from "../../components/contextApis/ContextProvider"
 import { CircleLoader } from "../../components/loader"
 import SelectionBottons from "../../components/selectionBottons"
+import { Footer } from "../../components/footerComponet/footer"
 import Card from "../../components/CardComponent/card"
 import { useContext } from "react"
 const FeaturedMovie = () => {
     const {filterMovies,error,movies,swichPage}=useContext(MyContext)
     return (
+        <>
         <div>
              {
         error ? 
@@ -26,6 +28,8 @@ const FeaturedMovie = () => {
             
     }
         </div>
+        <Footer />
+        </>
     )
 }
 export default FeaturedMovie

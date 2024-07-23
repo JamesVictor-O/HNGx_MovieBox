@@ -1,6 +1,7 @@
 import React from 'react'
 import MovieCard from '../../moviecards/MovieCard'
 import useFetch from '../useFetch/useFetch'
+import { Footer } from '../../../../components/footerComponet/footer'
 
 const LatestMovie = () => {
     const api_key=import.meta.env.VITE_API_KEY 
@@ -10,16 +11,16 @@ const LatestMovie = () => {
 
   return (
     <div className='hidden md:block max-w-[900px] mt-5'>
-         <div>
-         <span className="font-semibold text-[24px] py-5 leading-4">Latest Movie</span>
-           <div className="flex items-center gap-3 mt-3 flex-wrap md:flex-nowrap">
-                {
-                    recomendedvideos.slice(0,5).map(movie=>(
-                    <MovieCard key={movie.id} movie={movie} />
-                    ))
-                }
-           </div>
-       </div>
+        <div>
+          <span className="font-semibold text-[24px] py-5 leading-4">Latest Movie</span>
+            <div className="flex items-center gap-3 mt-3 flex-wrap md:flex-nowrap">
+                  {
+                      recomendedvideos.slice(0,5).map(movie=>(
+                      <MovieCard key={movie.id} movie={movie} />
+                      ))
+                  }
+            </div>
+        </div>
     </div>
   )
 }

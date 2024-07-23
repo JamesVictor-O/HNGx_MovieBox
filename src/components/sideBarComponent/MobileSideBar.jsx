@@ -6,7 +6,7 @@ import { MyContext } from '../contextApis/ContextProvider'
 const MobileSideBar = () => {
     const {setIsOpenNavBar}=useContext(MyContext)
   return (
-    <div className="md:hidden fixed  w-[80%] min-h-[90%] right-0 top-16 z-50 bg-white flex flex-col justify-between">
+    <div className="md:hidden fixed  w-[80%] min-h-[90%] right-0 top-12 z-50 bg-white flex flex-col justify-between">
         <div className=" w-[100%] h-[30%] flex  flex-col py-6 items-center">
             <NavLink to="/" onClick={()=>setIsOpenNavBar(false)}>
                 <div className="flex justify-center items-center cursor-pointer bg-red-400 w-28 h-10 rounded-full mb-3 text-white hover:bg-black">
